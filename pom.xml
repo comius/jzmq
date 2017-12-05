@@ -108,6 +108,42 @@
       </distributionManagement>
     </profile>
   </profiles>
+
+  <repositories>
+    <repository>
+      <id>ext-releases-local</id>
+      <url>http://repo.cosylab.com/artifactory/ext-releases-local</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>ext-snapshots-local</id>
+      <url>http://repo.cosylab.com/artifactory/ext-snapshots-local</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
+  <distributionManagement>
+    <repository>
+      <id>cosy</id>
+      <url>http://repo.cosylab.com/artifactory/ext-releases-local</url>
+    </repository>
+    <snapshotRepository>
+      <id>cosy</id>
+      <url>http://repo.cosylab.com/artifactory/ext-snapshots-local</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
